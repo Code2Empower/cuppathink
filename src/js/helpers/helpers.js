@@ -1,3 +1,7 @@
+import showdown from 'showdown';
+import DOMPurify from 'dompurify';
+const converter = new showdown.Converter();
+
 export function parseStoryblockData(arr){
   let appData ={}
   for(let i=0;i<arr.length;i++){
@@ -5,32 +9,31 @@ export function parseStoryblockData(arr){
     if(arr[i].name.includes('Post')){
       appData.posts = appData.posts || [];
       appData.posts.push(arr[i]);
-    //handles all other data
-    } else {
-      let contentArr = arr[i].content.body;
-      for(let v=0;v<contentArr.length;v++){
-        let current = contentArr[v];
-        //stores clean name
-        let cName = current.component.replace(/\s/g,'');
-        //removes unwanted data
-        delete current._uid;
-        delete current.component;
-        //catch for nested arrays with 1 title
-        let len = Object.keys(current).length;
-        if(len > 1){
-          let arr2=[];
-          for(let d=0;d<len;d++){
-            arr2.push(current[Object.keys(current)[d]]);
-          }
-          appData[cName] = arr2;
-        }else{
-          appData[cName] = current[Object.keys(current)[0]];
-        }
-      }
-    }
+    } 
   }
   return appData;
 };
+
+export function parseStoryblockPage(arr, pagename){
+  let page = {};
+  page[pagename] = {};
+
+  console.log(arr)
+
+  if(typeof(arr) !== 'undefined'){
+    const body = arr[0].content.body;
+    for(let i=0;i<body.length; i++) {
+      let current = body[i];
+      delete current.component;
+      delete current._uid;
+      let cleanName = Object.keys(current)[0];
+      page[pagename][cleanName] = current[cleanName];
+    }
+  } else {
+    console.log('no page data found')
+  }
+  return page[pagename];
+}
 
 export function parseStoryblockArticle(arr){
   let article ={};
@@ -38,7 +41,6 @@ export function parseStoryblockArticle(arr){
     article = arr;
   } else {
     console.log('no article found')
-    console.log(arr);
   }
   return article;
 };
@@ -77,4 +79,11 @@ export function articleDetailLinker(slug, ref, params){
 
 export function getSlugFromURL(url){
   return url.split('/articledetail/')[1].split('?')[0];
+}
+
+
+export function purifyHTML(str){
+    const htmlDirty = converter.makeHtml(str);
+    const htmlClean = DOMPurify.sanitize(htmlDirty).toString();
+    return htmlClean;
 }

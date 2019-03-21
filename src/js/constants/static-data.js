@@ -1,20 +1,20 @@
 import emailIcon from '../../img/emailIcon.png';
-import headerLogo from '../../img/logo.png';
+import headerLogo from '../../img/logo-small-white.jpg';
 
 const currentYear = new Date().getFullYear();
 
 const staticData ={
 	blognameName: "Blog Name",
 	currentYear: currentYear,
-	website: "https://example.com",
-	websiteClean: "example.com",
+	website: "https://www.cuppathink.com",
+	websiteClean: "www.cuppathink.com",
 	emailText: "Email:",
 	emailIcon: emailIcon,
 	headerLogo: headerLogo,
-	email: "info@domain.com",
+	email: "info@cuppathink.com",
 	footer:{
 		legalJargon1: "Copyright © 2018-",
-		legalJargon2: " Blog Name",
+		legalJargon2: " CuppaThink",
 		dev1:"Website created by: ",
 		dev2:"Jak-Jak",
 		dev3:"https://jakgrueneberg.com"

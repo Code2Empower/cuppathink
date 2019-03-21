@@ -37,7 +37,7 @@ class DarkModeToggle extends Component {
   render() {
     return (
       <div className="dark-mode-toggle">
-        <button type="button" onClick={() => setTheme('light')}>
+        <button className="sun" type="button" onClick={() => setTheme('light')}>
           ☀
         </button>
         <span className="toggle-control">
@@ -50,7 +50,7 @@ class DarkModeToggle extends Component {
           />
           <label htmlFor="dmcheck" />
         </span>
-        <button type="button" onClick={() => setTheme('dark')}>
+        <button type="button" className="moon" onClick={() => setTheme('dark')}>
           ☾
         </button>
       </div>
