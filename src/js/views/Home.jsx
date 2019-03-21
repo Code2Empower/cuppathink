@@ -25,7 +25,7 @@ class Home extends Component{
 			const APIdata2 = res.data;
 			console.log('Home - News Feed: Storyblok API Data:', APIdata2);
 			const newsFeed = parseStoryblockData(APIdata2.stories);
-
+			appData["isLoaded"] = true;
 			onLoad({
 				homeData: appData,
 				newsData: newsFeed});
