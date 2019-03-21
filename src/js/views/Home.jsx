@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Parser from 'html-react-parser';
 import axios from 'axios';
 import staticData from '../constants/static-data';
-import {parseStoryblockData} from '../helpers/helpers';
+import {parseStoryblockPage, purifyHTML} from '../helpers/helpers';
 import {HOME_LOADED} from '../constants/action-types';
 
 class Home extends Component{
@@ -15,7 +16,7 @@ class Home extends Component{
     .then(res => {
 		const APIdata = res.data;
 		console.log('Home: Storyblok API Data:', APIdata);
-		const appData = parseStoryblockData(APIdata.stories);
+		const appData = parseStoryblockPage(APIdata.stories, 'home');
 		appData["isLoaded"] = true;
 		console.log('Home: appData', appData)
 		onLoad(appData);
@@ -27,9 +28,11 @@ class Home extends Component{
 		const { app } = this.props;
 
 		return (
-			<div className="home-wrapper">
-				<h1>{home.Page}</h1>
-				<p>{app.AppTitle}</p>
+			<div className="home-wrapper container full-width">
+				<h1 className="home-title">{home.title}</h1>
+				<div className="home-intro">
+					{Parser( purifyHTML(home.intro) )}
+				</div>
 			</div>
 		)
 	}
