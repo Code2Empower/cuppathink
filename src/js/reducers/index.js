@@ -8,6 +8,7 @@ const initialState = {
   about:{},
   onlineResearchHelp:{},
 	articles:{},
+  articlesPage:{},
   articleDetail:{},
 	news:{
     page:{},
@@ -24,7 +25,8 @@ export const reducers = (state = initialState, action) => {
       });
     case ARTICLES_LOADED:
       return Object.assign({}, state, {
-        articles: action.data
+        articlesPage: action.data.articlesData,
+        articles: action.data.newsData
       });
     case ARTICLEDETAIL_LOADED:{
       return Object.assign({}, state, {
@@ -33,7 +35,8 @@ export const reducers = (state = initialState, action) => {
     }
     case HOME_LOADED:
       return Object.assign({}, state, {
-        home: action.data
+        home: action.data.homeData,
+        articles: action.data.newsData
       });
     case ABOUT_LOADED:
       return Object.assign({}, state, {

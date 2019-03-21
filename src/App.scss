@@ -2,12 +2,14 @@
 abbr,address,article,aside,audio,b,blockquote,body,body div,caption,cite,code,dd,del,details,dfn,dl,dt,em,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font-weight:normal;font-family:'Noto',serif;vertical-align:baseline;background:transparent}article,aside,details,figure,footer,header,main,nav,section,summary{display:block}html{box-sizing:border-box}*,*:after,*:before{box-sizing:inherit}embed,img,object{max-width:100%}html{overflow-y:scroll}ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}table{border-collapse:separate;border-spacing:0}th{font-weight:bold;vertical-align:bottom}td{font-weight:normal;vertical-align:top}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}pre{white-space:pre;white-space:pre-wrap;white-space:pre-line;word-wrap:break-word}input[type="radio"]{vertical-align:text-bottom}input[type="checkbox"]{vertical-align:bottom}.ie7 input[type="checkbox"]{vertical-align:baseline}.ie6 input{vertical-align:text-bottom}input,select,textarea{font:99% sans-serif}table{font-size:inherit;font:100%}small{font-size:85%}strong{font-weight:bold}td,td img{vertical-align:top}sub,sup{font-size:75%;line-height:0;position:relative}sup{top:-0.5em}sub{bottom:-0.25em}code,kbd,pre,samp{font-family:monospace, sans-serif}.clickable,button,input[type=button],input[type=file],input[type=submit],label{cursor:pointer}button,input,select,textarea{margin:0}button,input[type=button]{width:auto;overflow:visible}.ie7 img{-ms-interpolation-mode:bicubic}.clearfix:after{content:" ";display:block;clear:both}
 
 /*Body, Main, App, Default Styles*/
-$primary-dark: #001f5b;/*dark blue*/
-$primary: #003399;/*blue*/
-$primary-light: #085afb;/*light blue*/
-$secondary: #008d83;/*turquoise*/
-$tertiary: #21009e;/*purple*/
-$quarternary: #e69600;/*yellow*/
+$midnight:#010103;
+$black: #0b0c10;
+$grey: #1f2833;
+$white: #e8e8e9;
+$moon: #f5f3ce;
+$sun: #fff600;
+$teal: #66fcf1;
+$aqua: #45a29E;
 
 @font-face {
   font-family: 'Noto-Light';
@@ -38,15 +40,19 @@ $quarternary: #e69600;/*yellow*/
   src: url('./fonts/NotoSans-Black.ttf');
 }
 
-body, .main, .App{ 
-  background-color: #fff;
-  color: #000;
-  background: url('./img/brushed.png');
+body, .main, .App{
   font-family: 'Noto', serif;
 }
-body.dark, body.dark .main, body.dark .App{
-  background: #cacaca;
-  color: #fff;
+body.light{ 
+  background-color: $white;
+  transition: all 0.3s ease;
+  color: $black;
+  background: url('./img/brushed.png');
+}
+body.dark{
+  background: $black;
+  color: $white;
+  transition: all 0.3s ease;
 }
 .html{
   height:100%;
@@ -73,7 +79,7 @@ body.dark, body.dark .main, body.dark .App{
 }
 h1,h2,h3,h4,h5,h6{
   font-family: 'Noto-black', serif;
-  color: #000;
+  color: $black;
   text-shadow: 0px 2px 2px rgba(0,0,0,0.4),
     0px 4px 7px rgba(0,0,0,0.1),
     0px 8px 10px rgba(0,0,0,0.1);
@@ -83,6 +89,12 @@ h1,h2,h3,h4,h5,h6{
  -webkit-text-shadow: 0px 2px 2px rgba(0,0,0,0.4),
     0px 4px 7px rgba(0,0,0,0.1),
     0px 8px 10px rgba(0,0,0,0.1);
+}
+.dark{
+  h1,h2,h3,h4,h5,h6,p{
+    color:$white;
+    transition: all 0.3s ease;
+  }
 }
 h1{
     font-size: 32px;
@@ -94,29 +106,29 @@ h3{
     font-size: 18px;
 }
 a{
-  color: $primary-light;
+  color: $teal;
 }
 a:hover{
-  color: $quarternary;
-    text-shadow: 0px 2px 2px rgba(230,150,0,0.4),
-    0px 3px 6px rgba(230,150,0,0.1),
-    0px 4px 6px rgba(230,150,0,0.1);
- -moz-text-shadow: 0px 2px 2px rgba(230,150,0,0.4),
-    0px 3px 6px rgba(230,150,0,0.1),
-    0px 4px 6px rgba(230,150,0,0.1);
- -webkit-text-shadow: 0px 2px 2px rgba(230,150,0,0.4),
-    0px 3px 6px rgba(230,150,0,0.1),
-    0px 4px 6px rgba(230,150,0,0.1);
+  color: $white;
+    text-shadow: 0px 2px 2px rgba(102,252,241,0.4),
+    0px 2px 2px rgba(102,252,241,0.1),
+    0px 2px 2px rgba(102,252,241,0.1);
+ -moz-text-shadow: 0px 2px 2px rgba(102,252,241,0.4),
+    0px 2px 2px rgba(102,252,241,0.1),
+    0px 2px 2px rgba(102,252,241,0.1);
+ -webkit-text-shadow: 0px 2px 2px rgba(102,252,241,0.4),
+    0px 2px 2px rgba(102,252,241,0.1),
+    0px 2px 2px rgba(102,252,241,0.1);
 }
 .hidden{display: none !important;}
 .button{
   display: inline-block;
-  background-color: $primary-light;
+  background-color: $teal;
   margin-left: 15px;
   padding: 5px 8px;
   border-radius: 5px;
   text-decoration: none;
-  color: #ffffff !important;
+  color: $white !important;
   -moz-box-shadow: 0px 7px 15px rgba(0,0,0,0.3);
   -webkit-box-shadow: 0px 7px 15px rgba(0,0,0,0.3);
   box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.3);
@@ -124,17 +136,17 @@ a:hover{
   border-width: 0px;
 }
 .button:hover{
-  color: #ffffff !important;
-  background-color: $quarternary;
+  color: $white !important;
+  background-color: $aqua;
   -webkit-transition: background-color 180ms linear;
   -moz-transition: background-color 180ms linear;
   -o-transition: background-color 180ms linear;
   -ms-transition: background-color 180ms linear;
   transition: background-color 180ms linear;
   transform: translateY(-1px);
-  -moz-box-shadow: 0px 7px 15px rgba(230,150,0,0.4);
-  -webkit-box-shadow: 0px 7px 15px rgba(230,150,0,0.4);
-  box-shadow: 0px 7px 15px rgba(230,150,0,0.4);
+  -moz-box-shadow: 0px 7px 15px rgba(102,252,241,0.4);
+  -webkit-box-shadow: 0px 7px 15px rgba(102,252,241,0.4);
+  box-shadow: 0px 7px 15px rgba(102,252,241,0.4);
 }
 .container{
   width: calc(100% - 3px);
@@ -142,6 +154,10 @@ a:hover{
   margin: 0px auto;
   padding-bottom:25px;
   padding-top:10px;
+}
+.full-width{
+  display: inline-block;
+  padding: 0px 25px 0px 25px;
 }
 .left-25, .left-35, .left-50, .left-65{
   margin-right: 25px;
@@ -229,22 +245,23 @@ p, ol li{
 /*Header*/
 .main-header{
   width: 100%;
-  background-color: rgba(0,0,0,0.96);
+  background-color: rgba(1,1,3,0.96);
   position: fixed;
   top:0px;
   z-index:999999;
 }
 .header-outer{
   height:55px;
-  border-bottom: 1px solid $primary-dark;
-  box-shadow: 0px 0px 17px #000;
+  border-bottom: 1px solid $aqua;
+  box-shadow: 0px 0px 17px $black;
 }
 .header-inner{
   padding:5px 0px;
   margin-left:10px;
 }
 .header-logo{
-  width:50px;
+  width:141px;
+  margin-top:-5px;
   display: inline-block;
   float:left;
 }
@@ -260,10 +277,10 @@ p, ol li{
 .header-nav a{
   text-decoration: none;
   margin-left: 15px;
-  color: #ffffff;
+  color: $white;
 }
 .header-nav a:hover{
-  color: $primary-light;
+  color: $teal;
   text-shadow: 0px 2px 2px rgba(8,90,251,0.4),
     0px 3px 6px rgba(8,90,251,0.1),
     0px 4px 6px rgba(8,90,251,0.1);
@@ -307,9 +324,9 @@ p, ol li{
   height: 150px;
   width: 100%;
   padding: 5px 25px;
-  border-top: 1px solid $primary-dark;
-  color: #fff;
-  background: #000;
+  border-top: 1px solid $aqua;
+  color: $white;
+  background: $midnight;
   display: block;
 }
 @media all and (max-width: 579px){
@@ -348,20 +365,35 @@ p, ol li{
 /*Begin Toggle*/
 .dark-mode-toggle {
   display: flex;
-  margin:100px auto 0px auto;
+  margin: 70px 0px 0px 4px;
   & > button {
     font-size: 1.2em;
     background: none;
     border: none;
-    color: #ffe600;
     cursor: pointer;
     transition: color 0.3s ease;
-    &:last-child {
-      color: #666;
+    
+    &.sun {
+      color: $sun;
+    }
+    &.moon {
+      color: $midnight;
     }
 
     &:focus {
       outline: none;
+    }
+  }
+}
+.dark{
+  .dark-mode-toggle {
+      & > button {
+      &.sun {
+        color: $grey;
+      }
+      &.moon {
+        color: $moon;
+      }
     }
   }
 }
@@ -376,7 +408,7 @@ p, ol li{
 input[type='checkbox'].dmcheck {
   width: 40px;
   height: 10px;
-  background: #555;
+  background: $grey;
   position: relative;
   border-radius: 5px;
   -webkit-appearance: none;
@@ -391,10 +423,10 @@ input[type='checkbox'].dmcheck {
   }
 
   &:focus-visible {
-    outline: solid 2px white;
+    outline: solid 2px $white;
   }
 
-  & + label {
+  + label {
     display: inline-block;
     width: 18px;
     height: 18px;
@@ -403,9 +435,29 @@ input[type='checkbox'].dmcheck {
     cursor: pointer;
     position: absolute;
     left: 2px;
-    background: #fff;
-    opacity: 0.9;
-    background-color: #f6f6f6;
+    background: $white;
+    background-color: #ffffff;
   }
 }
 /*End Toggle*/
+/*Begin Home*/
+.home-wrapper{
+  .home-title{
+    margin:0px 0px 10px 0px;
+  }
+  .home-intro{
+    margin:0px 0px 25px 0px;
+  }
+  .article-feed-wrapper{
+    margin:0px 0px 50px 0px;
+    text-align: center;
+
+    .article-item{
+      display: inline-block;
+      max-width:400px;
+      padding:0px 10px 0px 0px;
+    }
+
+  }
+}
+/*End Home*/
