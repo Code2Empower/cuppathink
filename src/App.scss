@@ -9,6 +9,7 @@ $white: #e8e8e9;
 $moon: #f5f3ce;
 $sun: #fff600;
 $teal: #66fcf1;
+$darkTeal:#56cfc8;
 $aqua: #45a29E;
 
 @font-face {
@@ -48,11 +49,41 @@ body.light{
   transition: all 0.3s ease;
   color: $black;
   background: url('./img/brushed.png');
+  a{
+    color: $aqua;
+  }
+  a:hover{
+    color: $darkTeal;
+    text-shadow: 0px 2px 2px rgba(86,207,200,0.4),
+      0px 2px 2px rgba(86,207,200,0.1),
+      0px 2px 2px rgba(86,207,200,0.1);
+   -moz-text-shadow: 0px 2px 2px rgba(86,207,200,0.4),
+      0px 2px 2px rgba(86,207,200,0.1),
+      0px 2px 2px rgba(86,207,200,0.1);
+   -webkit-text-shadow: 0px 2px 2px rgba(86,207,200,0.4),
+      0px 2px 2px rgba(86,207,200,0.1),
+      0px 2px 2px rgba(86,207,200,0.1);
+  }
 }
 body.dark{
   background: $black;
   color: $white;
   transition: all 0.3s ease;
+  a{
+    color: $teal;
+  }
+  a:hover{
+    color: $white;
+    text-shadow: 0px 2px 2px rgba(102,252,241,0.4),
+      0px 2px 2px rgba(102,252,241,0.1),
+      0px 2px 2px rgba(102,252,241,0.1);
+   -moz-text-shadow: 0px 2px 2px rgba(102,252,241,0.4),
+      0px 2px 2px rgba(102,252,241,0.1),
+      0px 2px 2px rgba(102,252,241,0.1);
+   -webkit-text-shadow: 0px 2px 2px rgba(102,252,241,0.4),
+      0px 2px 2px rgba(102,252,241,0.1),
+      0px 2px 2px rgba(102,252,241,0.1);
+  }
 }
 .html{
   height:100%;
@@ -104,21 +135,6 @@ h2{
 }
 h3{
     font-size: 18px;
-}
-a{
-  color: $teal;
-}
-a:hover{
-  color: $white;
-    text-shadow: 0px 2px 2px rgba(102,252,241,0.4),
-    0px 2px 2px rgba(102,252,241,0.1),
-    0px 2px 2px rgba(102,252,241,0.1);
- -moz-text-shadow: 0px 2px 2px rgba(102,252,241,0.4),
-    0px 2px 2px rgba(102,252,241,0.1),
-    0px 2px 2px rgba(102,252,241,0.1);
- -webkit-text-shadow: 0px 2px 2px rgba(102,252,241,0.4),
-    0px 2px 2px rgba(102,252,241,0.1),
-    0px 2px 2px rgba(102,252,241,0.1);
 }
 .hidden{display: none !important;}
 .button{
@@ -249,59 +265,167 @@ p, ol li{
   position: fixed;
   top:0px;
   z-index:999999;
-}
-.header-outer{
-  height:55px;
-  border-bottom: 1px solid $aqua;
-  box-shadow: 0px 0px 17px $black;
-}
-.header-inner{
-  padding:5px 0px;
-  margin-left:10px;
-}
-.header-logo{
-  width:141px;
-  margin-top:-5px;
-  display: inline-block;
-  float:left;
-}
-.header-logo a img{
-  width:100%;
-}
-.header-nav{
-  display: inline-block;
-  float:right;
-  margin-right: 25px;
-  padding-top: 10px;
-}
-.header-nav a{
-  text-decoration: none;
-  margin-left: 15px;
-  color: $white;
-}
-.header-nav a:hover{
-  color: $teal;
-  text-shadow: 0px 2px 2px rgba(8,90,251,0.4),
-    0px 3px 6px rgba(8,90,251,0.1),
-    0px 4px 6px rgba(8,90,251,0.1);
- -moz-text-shadow: 0px 2px 2px rgba(8,90,251,0.4),
-    0px 3px 6px rgba(8,90,251,0.1),
-    0px 4px 6px rgba(8,90,251,0.1);
- -webkit-text-shadow: 0px 2px 2px rgba(8,90,251,0.4),
-    0px 3px 6px rgba(8,90,251,0.1),
-    0px 4px 6px rgba(8,90,251,0.1);
-}
-@media all and (max-width: 480px){
+  
+  .header-outer{
+    height:55px;
+    border-bottom: 1px solid $aqua;
+    box-shadow: 0px 0px 17px $black;
+  }
+  .header-inner{
+    height: 100%;
+    width: 100%;
+  }
   .header-logo{
-    width:75px;
+    width:141px;
+    margin-top:-5px;
+    display: inline-block;
+    float:left;
+  }
+  .header-logo img{
+    width:100%;
     margin-top:10px;
+    height: 45px;
   }
   .header-nav{
-    margin-right:10px;
-    font-size:14px;
+    display: inline-block;
+    float:right;
+    margin-right: 25px;
+    padding-top: 15px;
+    
+    a{
+      text-decoration: none;
+      margin-left: 25px;
+      color: $white;
+    }
+    a:hover{
+      color: $teal;
+      text-shadow: 0px 2px 2px rgba(8,90,251,0.4),
+        0px 3px 6px rgba(8,90,251,0.1),
+        0px 4px 6px rgba(8,90,251,0.1);
+     -moz-text-shadow: 0px 2px 2px rgba(8,90,251,0.4),
+        0px 3px 6px rgba(8,90,251,0.1),
+        0px 4px 6px rgba(8,90,251,0.1);
+     -webkit-text-shadow: 0px 2px 2px rgba(8,90,251,0.4),
+        0px 3px 6px rgba(8,90,251,0.1),
+        0px 4px 6px rgba(8,90,251,0.1);
+    }
   }
-  .nav-home{
+}
+.header-nav-mobile{
+  display: none;
+  .mobile-links{
     display: none;
+  }
+}
+
+@media all and (max-width: 700px){
+    .dark{
+      .main-header{
+        .mobile-links{
+          background:$black;
+          color:$white;
+        }
+      }
+    }
+    .light{
+      .main-header{
+        .mobile-links{
+          background:$white;
+          color:$black;
+
+          a{
+            color: $aqua;
+          
+            &:hover{
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+  .main-header{
+    .header-nav{
+      display: none;
+    }
+    .header-nav-mobile{
+      display: inline-block;
+      float:left;
+
+      .hamburger{
+        width:40px;
+        height:40px;
+        margin:10px 30px 0px 10px;
+        display: inline-block;
+
+        &:hover{
+          cursor:pointer;
+        }
+        span{
+          width: 100%;
+          margin-top: 12px;
+        }
+      }
+      .header-logo{
+        display: inline-block;
+      }
+      .mobile-links{
+        position:absolute;
+        top:55px;
+        left:0px;
+        width: 100%;
+        height: 100%;
+        min-height: 300px;
+        border: 2px solid $aqua;
+
+        a{
+          text-decoration: none;
+          display: inline-block;
+          clear: both;
+          width: 100%;
+          height:45px;
+          padding: 5px 10px;
+          border-bottom: 1px solid $aqua;
+          font-weight:bold;
+
+        &:hover{
+          background-color:$aqua;
+        }
+        }
+      }
+      .hamburger span, .hamburger span:before, .hamburger span:after {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 5px;
+        width: 40px;
+        background: $white;
+        position: absolute;
+        display: block;
+        content: '';
+        pointer-events: none;
+      }
+      .hamburger span:before {
+        top: -10px;
+      }
+      .hamburger span:after {
+        bottom: -10px; 
+      }
+      .hamburger span, .hamburger span:before, .hamburger span:after {
+        transition: all 500ms ease-in-out;
+      }
+      .hamburger.active span {
+        background-color: transparent;
+      }
+      .hamburger.active span:before, .hamburger.active span:after {
+        top: 0;
+      }
+      .hamburger.active span:before {
+        transform: rotate(45deg);
+      }
+      .hamburger.active span:after {
+        transform: rotate(-45deg);
+      }
+    }
   }
 }
 @media all and (max-width: 360px){

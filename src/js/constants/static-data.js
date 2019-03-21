@@ -1,5 +1,5 @@
 import emailIcon from '../../img/emailIcon.png';
-import headerLogo from '../../img/logo-small-white.jpg';
+import headerLogo from '../../img/logo-small-dark.png';
 
 const currentYear = new Date().getFullYear();
 
