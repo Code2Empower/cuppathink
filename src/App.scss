@@ -446,6 +446,17 @@ input[type='checkbox'].dmcheck {
     margin:0px 0px 10px 0px;
   }
   .home-intro{
+    margin:0px 0px 25px 0px;
+  }
+  .article-feed-wrapper{
+    margin:0px 0px 50px 0px;
+    text-align: center;
+
+    .article-item{
+      display: inline-block;
+      max-width:400px;
+      padding:0px 10px 0px 0px;
+    }
 
   }
 }
