@@ -1,7 +1,6 @@
 # CuppaThink
 
 [![CuppaThink](https://cuppathink.blog/logo-160x61.jpg)](https://cuppathink.blog/)
-
 https://www.cuppathink.blog/
 
 ## **About The Project**
