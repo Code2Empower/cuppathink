@@ -11,7 +11,7 @@ class ArticleAbstract extends Component {
 	render() {
 		const article = this.props.article;
 		console.log(article)
-		const htmlDirty = converter.makeHtml(article.content.markdown);
+		const htmlDirty = converter.makeHtml(article.content.abstract);
 		const htmlClean = DOMPurify.sanitize(htmlDirty).toString();
 		const readMore = articleDetailLinker(article.slug, 'internal');
 

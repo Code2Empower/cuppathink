@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import Parser from 'html-react-parser';
 import axios from 'axios';
 import staticData from '../constants/static-data';
-import {parseStoryblockPage, purifyHTML} from '../helpers/helpers';
+import {parseStoryblockPage, parseStoryblockData, purifyHTML} from '../helpers/helpers';
 import {HOME_LOADED} from '../constants/action-types';
+import ArticleFeed from '../components/ArticleFeed';
 
 class Home extends Component{
 
@@ -17,14 +18,24 @@ class Home extends Component{
 		const APIdata = res.data;
 		console.log('Home: Storyblok API Data:', APIdata);
 		const appData = parseStoryblockPage(APIdata.stories, 'home');
-		appData["isLoaded"] = true;
 		console.log('Home: appData', appData)
-		onLoad(appData);
+		
+		axios.get(staticData.api.storyblockBase+'stories/?starts_with=posts&version=published&'+staticData.api.storyblockToken+cv)
+		.then(res => {
+			const APIdata2 = res.data;
+			console.log('Home - News Feed: Storyblok API Data:', APIdata2);
+			const newsFeed = parseStoryblockData(APIdata2.stories);
+
+			onLoad({
+				homeData: appData,
+				newsData: newsFeed});
+		})
     });
   }
 
 	render() {
 		const { home } = this.props;
+		const { articles } = this.props;
 		const { app } = this.props;
 
 		return (
@@ -33,16 +44,20 @@ class Home extends Component{
 				<div className="home-intro">
 					{Parser( purifyHTML(home.intro) )}
 				</div>
+
+				<h2>Latest Articles</h2>
+				<ArticleFeed/>
 			</div>
 		)
 	}
 }
 
 const mapStateToProps = state => ({
-  home: state.home,
-  app: state.app
+	articles: state.articles,
+	home: state.home,
+	app: state.app
 });
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   onLoad: data => dispatch({ type: HOME_LOADED, data }),
 });
 
