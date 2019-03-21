@@ -461,3 +461,19 @@ input[type='checkbox'].dmcheck {
   }
 }
 /*End Home*/
+/*Begin About*/
+.about-wrapper{
+  .about-title{
+    margin:0px 0px 10px 0px;
+  }
+  .about-intro{
+    margin:0px 0px 25px 0px;
+    img{
+      width:100%;
+      max-width: 600px;
+      margin: 15px auto 0px auto;
+      display: block;
+    }
+  }
+}
+/*End About*/
