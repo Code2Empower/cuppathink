@@ -2,7 +2,7 @@
 
 [![CuppaThink](https://cuppathink.blog/logo-160x61.jpg)](https://cuppathink.blog/)
 
-https://www.cuppathink.blog/
+[https://www.cuppathink.blog/](https://www.cuppathink.blog/)
 
 ## **About The Project**
 This project's mission is to destroy ignorance and to instill critical thinking.
@@ -32,15 +32,17 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## **Content & CMS**
 StoryBlok is the current CMS. There is a posts section, which has a schema defined for all articles.  All other content is stored via page name, or global `app` data. There is also a `static-data.js` file in the `src/js/constants` folder, which contains data that should not need frequent updates.  There are several functions for parsing StoryBlok data, and making it easier to reference in the app.  These functions live in `src/js/helpers/helpers.js`.
 
+Anchor tag parameters like `target` and `rel` are handled via app logic.  Whenever a string is passed to `purifyHTML`, which lives in `./js/helpers/helpers.js`, an optional second param can be passed. It can be `'both'` to add `rel='nofollow noreferrer` and target='_blank' or `'target'`, which only adds the target param.  All cases, even without this param, will recieve `rel=noopener` on any exteral links, as a security step.
+
 ## **Architecture**
-### index.html 
+### index.html
 is the highest level file, and contains the application html template.
-### index.js 
+### index.js
 passes the `store` to the `app` via the `provider`, and handles polyfills.
-### app.jsx 
+### app.jsx
 loads the bulk of the app data and css, and manages routes via `<switch>`.
-### Folders 
-are managed via functionality and they are named as such.  For example `views` can be thought of as pages and `components` get used in those views. 
+### Folders
+are managed via functionality and they are named as such.  For example `views` can be thought of as pages and `components` get used in those views.
 
 ## **package.json**
 See the package.json for the latest list of dependencies.  A few choices are explained below.
@@ -57,7 +59,7 @@ Showdown is used to convert markdown from API calls to rich text.  Dompurify is 
 ### Redux, connected-react-router, history
 Redux is used to manage state.  History is created in `store/index.js`.  Routes are managed via `<Switch>` in the `app.jsx`.
 
-### The critical role of `redux-thunk` 
+### The critical role of `redux-thunk`
 I added redux-thunk to `store/index.js` when I was determining the best way to handle state management.  It lives there, and only there, and if I remove it, the application breaks.  I have no clue how it works; it's basically magic. So, it will probably stay forever now.
 
 ## **Branching & Deployment Via Netlify**
