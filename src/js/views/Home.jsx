@@ -5,7 +5,7 @@ import axios from 'axios';
 import staticData from '../constants/static-data';
 import {parseStoryblockPage, parseStoryblockData, purifyHTML} from '../helpers/helpers';
 import {HOME_LOADED} from '../constants/action-types';
-import ArticleFeed from '../components/ArticleFeed';
+import ArticleFeedShort from '../components/ArticleFeedShort';
 
 class Home extends Component{
 
@@ -20,7 +20,7 @@ class Home extends Component{
 		const appData = parseStoryblockPage(APIdata.stories, 'home');
 		console.log('Home: appData', appData)
 		
-		axios.get(staticData.api.storyblockBase+'stories/?starts_with=posts&version=published&'+staticData.api.storyblockToken+cv)
+		axios.get(staticData.api.storyblockBase+'stories/?starts_with=posts&per_page=2&version=published&'+staticData.api.storyblockToken+cv)
 		.then(res => {
 			const APIdata2 = res.data;
 			console.log('Home - News Feed: Storyblok API Data:', APIdata2);
@@ -46,7 +46,7 @@ class Home extends Component{
 				</div>
 
 				<h2>Latest Articles</h2>
-				<ArticleFeed/>
+				<ArticleFeedShort/>
 			</div>
 		)
 	}

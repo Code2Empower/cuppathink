@@ -18,10 +18,10 @@ class ArticleAbstract extends Component {
 		return (
 		    <div className="article-item">
 		    	<div className="left-35">
-					<img className="article-image" src={article.content.image} alt="" />
+					<a href={readMore}><img className="article-image" src={article.content.image} alt="" /></a>
 				</div>
 				<div className="right-65">
-					<h3 className="article-title">{article.content.title}</h3>
+					<a href={readMore} className="no-decoration"><h3 className="article-title">{article.content.title}</h3></a>
 					<div className="article-description">{Parser( htmlClean )}</div>
 					<a href={readMore} className="article-link">Read More</a>
 		    	</div>
