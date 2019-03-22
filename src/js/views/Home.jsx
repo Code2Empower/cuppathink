@@ -5,7 +5,7 @@ import axios from 'axios';
 import staticData from '../constants/static-data';
 import {parseStoryblockPage, parseStoryblockData, purifyHTML} from '../helpers/helpers';
 import {HOME_LOADED} from '../constants/action-types';
-import ArticleFeed from '../components/ArticleFeed';
+import ArticleFeedShort from '../components/ArticleFeedShort';
 
 class Home extends Component{
 
@@ -46,7 +46,7 @@ class Home extends Component{
 				</div>
 
 				<h2>Latest Articles</h2>
-				<ArticleFeed/>
+				<ArticleFeedShort/>
 			</div>
 		)
 	}
