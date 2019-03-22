@@ -31,7 +31,7 @@ class About extends Component{
 			<div className="about-wrapper container full-width">
 				<h1 className="about-intro">{about.page_title}</h1>
 				<div className="about-intro">
-					{Parser( purifyHTML(about.about_details) )}
+					{Parser( purifyHTML(about.about_details, 'no') )}
 				</div>
 			</div>
 		)

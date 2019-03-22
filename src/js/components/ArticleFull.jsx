@@ -10,13 +10,12 @@ class ArticleFull extends Component {
 		console.log('article details from articleFull Component:', article);
 
 		if(typeof(article) !== 'undefined'){
-			const htmlClean = purifyHTML(article.content.markdown, true);
 
 			return (
 			    <div className="article-item">
 			       <img className="article-image" src={article.content.image} alt="" />
 			       <h1 className="article-title">{article.content.title}</h1>
-			       <div className="article-description">{Parser( htmlClean )}</div>
+			       <div className="article-description">{Parser( purifyHTML(article.content.markdown, 'both') )}</div>
 			    </div>
 		    );
 		}else{

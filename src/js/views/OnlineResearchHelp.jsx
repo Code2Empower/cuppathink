@@ -31,7 +31,19 @@ class OnlineResearchHelp extends Component{
 			<div className="research-wrapper">
 				<h1>{onlineResearchHelp.page_title}</h1>
 				<div className="research-intro">
-					{Parser( purifyHTML(onlineResearchHelp.research_intro, true) )}
+					{Parser( purifyHTML(onlineResearchHelp.research_intro, 'both') )}
+				</div>
+				<h1>{onlineResearchHelp.section_title}</h1>
+				<div className="research-intro">
+					{Parser( purifyHTML(onlineResearchHelp.body_first, 'both') )}
+				</div>
+				<h1>{onlineResearchHelp.section_title_2}</h1>
+				<div className="research-intro">
+					{Parser( purifyHTML(onlineResearchHelp.body_second, 'both') )}
+				</div>
+				<h1>{onlineResearchHelp.section_title_3}</h1>
+				<div className="research-intro">
+					{Parser( purifyHTML(onlineResearchHelp.body_third, 'target') )}
 				</div>
 			</div>
 		)

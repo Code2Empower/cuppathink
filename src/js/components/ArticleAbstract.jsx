@@ -7,7 +7,6 @@ class ArticleAbstract extends Component {
 	render() {
 		const article = this.props.article;
 		console.log(article)
-		const htmlClean = purifyHTML(article.content.abstract, true);
 		const readMore = articleDetailLinker(article.slug, 'internal');
 
 		return (
@@ -17,7 +16,7 @@ class ArticleAbstract extends Component {
 				</div>
 				<div className="right-65">
 					<a href={readMore} className="no-decoration"><h3 className="article-title">{article.content.title}</h3></a>
-					<div className="article-description">{Parser( htmlClean )}</div>
+					<div className="article-description">{Parser( purifyHTML(article.content.abstract, 'both') )}</div>
 					<a href={readMore} className="article-link">Read More</a>
 		    	</div>
 		    </div>
