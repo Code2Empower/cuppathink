@@ -596,7 +596,9 @@ input[type='checkbox'].dmcheck {
     margin:0px 0px 10px 0px;
   }
   .home-intro{
-    margin:0px 0px 25px 0px;
+    margin:0px auto 25px auto;
+    text-align: left;
+    max-width: 800px;
   }
   .article-feed-wrapper{
     margin:0px 0px 50px 0px;
