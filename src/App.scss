@@ -695,3 +695,35 @@ input[type='checkbox'].dmcheck {
   }
 }
 /*End News*/
+/*Begin Articles*/
+.articles-page-wrapper{
+  margin-bottom: 50px;
+  
+  h1{
+  }
+  .article-feed-wrapper{
+    margin-top: 20px;
+
+    .article-item{
+      text-align: left;
+      margin:0px 0px 15px 0px;
+      display: block;
+
+      .article-image{
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+      }
+      .article-title{
+        margin-bottom:6px;
+      }
+      .article-description{
+        margin: 0px 0px 0px 2px;
+      }
+      .article-link{
+        margin: 0px 0px 0px 2px;
+      }
+    }
+  }
+}
+/*End Articles*/
