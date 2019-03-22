@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './App.scss';
+import './fonts/fa-all-min.css';
 import { connect } from 'react-redux';
 import Header from './js/components/Header';
 import DarkModeToggle from './js/components/DarkModeToggle';

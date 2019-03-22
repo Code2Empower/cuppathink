@@ -7,7 +7,7 @@ $black: #0b0c10;
 $grey: #1f2833;
 $white: #e8e8e9;
 $moon: #f5f3ce;
-$sun: #fff600;
+$sun: #f2da0b;
 $teal: #66fcf1;
 $darkTeal:#56cfc8;
 $aqua: #45a29E;
@@ -527,12 +527,21 @@ p, ol li{
     border: none;
     cursor: pointer;
     transition: color 0.3s ease;
+
+    i{
+      height: 20px;
+      width: 20px;
+    }
     
     &.sun {
-      color: $sun;
+      i{
+        color: $sun;
+      }
     }
     &.moon {
-      color: $midnight;
+      i{
+        color: $midnight;
+      }
     }
 
     &:focus {
@@ -544,10 +553,14 @@ p, ol li{
   .dark-mode-toggle {
       & > button {
       &.sun {
-        color: $grey;
+        i{
+          color: $grey;
+        }
       }
       &.moon {
-        color: $moon;
+        i{
+          color: $moon;
+        }
       }
     }
   }
