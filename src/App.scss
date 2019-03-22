@@ -405,7 +405,7 @@ p, ol li{
         top:55px;
         left:0px;
         width: 100%;
-        height: 100%;
+        height: 95vh;
         min-height: 300px;
         border: 2px solid $aqua;
 
@@ -421,6 +421,18 @@ p, ol li{
 
         &:hover{
           background-color:$aqua;
+        }
+        &.secondary-nav-close{
+          position:relative;
+          top:200px;
+          width: 150px;
+          display: block;
+          float:right;
+
+          span{
+            font-size: 18px;
+            font-weight: bold;
+          }
         }
         }
       }
