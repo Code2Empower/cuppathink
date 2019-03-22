@@ -46,7 +46,7 @@ const staticData ={
 		},
 		{
 			id: "independent",
-			name: "The independent"
+			name: "The Independent"
 		},
 		{
 			id: "nbc-news",
@@ -74,7 +74,7 @@ const staticData ={
 		},
 		{ 
 			id: "the-telegraph",
-			name: "the Telegraph"
+			name: "The Telegraph"
 		},
 		{ 
 			id: "the-wall-street-journal",

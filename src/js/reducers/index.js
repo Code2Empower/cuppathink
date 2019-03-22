@@ -10,9 +10,9 @@ const initialState = {
 	articles:{},
   articlesPage:{},
   articleDetail:{},
+  newsPage:{},
 	news:{
-    page:{},
-    json:null
+    json:null,
   },
   source:'bbc-news'
 }
@@ -48,7 +48,7 @@ export const reducers = (state = initialState, action) => {
       });
     case NEWS_LOADED:
       return Object.assign({}, state, {
-        news: action.data
+        newsPage: action.data
       });
     case SELECT_SOURCE:
        return { ...state, source: action.source };

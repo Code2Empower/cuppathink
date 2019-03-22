@@ -7,7 +7,7 @@ let NewsFetchButton = ({ getPosts, source }) => (
 	  onClick={() => { getPosts(source) }}
 	  className='button'
 	>
-	  Get top news
+	  Get Top News
 	</div>
 );
 
