@@ -20,7 +20,7 @@ class Home extends Component{
 		const appData = parseStoryblockPage(APIdata.stories, 'home');
 		console.log('Home: appData', appData)
 		
-		axios.get(staticData.api.storyblockBase+'stories/?starts_with=posts&version=published&'+staticData.api.storyblockToken+cv)
+		axios.get(staticData.api.storyblockBase+'stories/?starts_with=posts&per_page=2&version=published&'+staticData.api.storyblockToken+cv)
 		.then(res => {
 			const APIdata2 = res.data;
 			console.log('Home - News Feed: Storyblok API Data:', APIdata2);
