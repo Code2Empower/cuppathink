@@ -18,8 +18,6 @@ export function parseStoryblockPage(arr, pagename){
   let page = {};
   page[pagename] = {};
 
-  console.log(arr)
-
   if(typeof(arr) !== 'undefined'){
     const body = arr[0].content.body;
     for(let i=0;i<body.length; i++) {
@@ -85,8 +83,10 @@ export function getSlugFromURL(url){
 export function purifyHTML(str, noFollow){
     const htmlDirty = converter.makeHtml(str);
     const htmlClean = DOMPurify.sanitize(htmlDirty).toString();
+    console.log(htmlClean);
     if(noFollow){
-      const htmlNoFollow = htmlClean.replace(/<a/g, "<a rel='nofollow noopener noreferrer'")
+      //regex matches all '<a href=' except internal links, then adds the correct params
+      const htmlNoFollow = htmlClean.replace(/(?!<a href="\/|<a href=".\/|<a href="https:\/\/cuppathink.blog|<a href="http:\/\/cuppathink.blog|<a href="www.cuppathink.blog|<a href="https:\/\/www.cuppathink.blog)<a href=/g, "<a rel='nofollow noopener noreferrer' target='_blank' href=");
       return htmlNoFollow;   
     }else{
       return htmlClean;

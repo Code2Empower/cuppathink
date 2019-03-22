@@ -42,7 +42,7 @@ class Home extends Component{
 			<div className="home-wrapper container full-width">
 				<h1 className="home-title">{home.title}</h1>
 				<div className="home-intro">
-					{Parser( purifyHTML(home.intro) )}
+					{Parser( purifyHTML(home.intro, false) )}
 				</div>
 
 				<h2>Latest Articles</h2>

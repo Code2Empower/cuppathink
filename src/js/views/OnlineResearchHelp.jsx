@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Parser from 'html-react-parser';
 import axios from 'axios';
 import staticData from '../constants/static-data';
-import {parseStoryblockPage} from '../helpers/helpers';
+import {parseStoryblockPage, purifyHTML} from '../helpers/helpers';
 import {ONLINERESEARCHHELP_LOADED} from '../constants/action-types';
 
 class OnlineResearchHelp extends Component{
@@ -27,8 +28,11 @@ class OnlineResearchHelp extends Component{
 		const { app } = this.props;
 
 		return (
-			<div className="home-wrapper">
+			<div className="research-wrapper">
 				<h1>{onlineResearchHelp.page_title}</h1>
+				<div className="research-intro">
+					{Parser( purifyHTML(onlineResearchHelp.research_intro, true) )}
+				</div>
 			</div>
 		)
 	}
