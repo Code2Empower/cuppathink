@@ -1,6 +1,7 @@
 # CuppaThink
 
 [![CuppaThink](https://cuppathink.blog/logo-160x61.jpg)](https://cuppathink.blog/)
+
 https://www.cuppathink.blog/
 
 ## **About The Project**
@@ -8,8 +9,7 @@ This project's mission is to destroy ignorance and to instill critical thinking.
 
 ## **Running the project locally**
 This project uses [Create React App](https://github.com/facebook/create-react-app).
-After cloning the src repo, 
-
+After cloning the repo, run `npm install` and then `npm start`.
 
 The following commands are available:
 
@@ -28,6 +28,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## **Content & CMS**
+StoryBlok is the current CMS. There is a posts section, which has a schema defined for all articles.  All other content is stored via page name, or global `app` data. There is also a `static-data.js` file in the `src/js/constants` folder, which contains data that should not need frequent updates.  There are several functions for parsing StoryBlok data, and making it easier to reference in the app.  These functions live in `src/js/helpers/helpers.js`.
 
 ## **Architecture**
 ### index.html 
@@ -57,7 +60,7 @@ Redux is used to manage state.  History is created in `store/index.js`.  Routes 
 ### The critical role of `redux-thunk` 
 I added redux-thunk to `store/index.js` when I was determining the best way to handle state management.  It lives there, and only there, and if I remove it, the application breaks.  I have no clue how it works; it's basically magic. So, it will probably stay forever now.
 
-## Branching & Deployment Via Netlify
+## **Branching & Deployment Via Netlify**
 All major updates should be branched from `dev`, once ready they can ber merged back to `dev`.  Finally, to deploy live, dev latest should be merged with `master`.  As soon as `master` is updated, a live deploy will be initiated.
 
 Branches can be viewed in a preview envirnment via the netlify site.
