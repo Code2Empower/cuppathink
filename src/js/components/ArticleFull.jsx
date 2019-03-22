@@ -19,8 +19,8 @@ class ArticleFull extends Component {
 
 			return (
 			    <div className="article-item">
-			       <h3 className="article-title">{article.content.title}</h3>
 			       <img className="article-image" src={article.content.image} alt="" />
+			       <h1 className="article-title">{article.content.title}</h1>
 			       <div className="article-description">{Parser( htmlClean )}</div>
 			    </div>
 		    );

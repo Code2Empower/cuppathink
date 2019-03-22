@@ -41,7 +41,7 @@ class ArticleDetail extends Component{
 	render() {
 		if(this.state.loaded === true){
 			return (
-				<div>
+				<div className="article-detail-wrapper">
 					<Helmet>
 			            <title>{this.state.articleDetail.content.title}</title>
 			            <meta name="description" content={this.state.articleDetail.content.title} />
