@@ -100,8 +100,9 @@ body.dark{
 .main{
   position: relative;
   width: 100%;
-  margin-top: 75px;
+  margin-top: 15px;
   padding-bottom:150px;
+  text-align: center;
 }
 @media all and (max-width: 579px){
   .main{
@@ -134,7 +135,7 @@ h2{
     font-size: 24px;
 }
 h3{
-    font-size: 18px;
+    font-size: 20px;
 }
 .hidden{display: none !important;}
 .dark .main, .light .main{
@@ -627,5 +628,68 @@ input[type='checkbox'].dmcheck {
 }
 /*End About*/
 /*Begin News*/
+.news-wrapper{
+  margin-bottom:50px;
+  text-align:center;
+  h1{
+  }
+  .news-sources-wrapper{
+    margin:15px 15px 0px 0px;
+    width:100%;
+    max-width: 500px;
+    text-align: left;
+    background:$grey;
+    padding:15px 0px 15px 10px;
+    border-radius: 10px;
+    .news-item{
+      display: inline-block;
+      width:auto;
+      clear:none;
+      .source-button{
+        display: inline-block;
+        width:auto;
+        clear:none;
+        margin: 0px 10px 15px 10px;
+      }
+    }
+    .news-fetch-wrapper{
+      .button{
+        margin:0px 10px;
+        background:$midnight;
+        color:$white;
+        text-shadow: none;
+        font-weight: normal;
+      }
+      .button:hover{
+        background:$teal;
+        color:$aqua;
+        font-weight: bold;
+        text-shadow: none;
+        font-weight: normal;
+      }
+    }
+  }
 
+  .news-feed-wrapper{
+    text-align: left;
+    margin:5px 0px 0px 5px;
+    .news-item{
+      width:100%;
+      max-width: 500px;
+      margin-bottom:25px;
+      .news-title{
+        margin-bottom: 10px;
+      }
+      .news-image{
+
+      }
+      .news-description{
+        margin: 0px 6px 2px 6px;
+      }
+      .news-link{
+        margin: 0px 0px 0px 6px;
+      }
+    }
+  }
+}
 /*End News*/

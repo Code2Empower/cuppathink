@@ -20,7 +20,7 @@ class ArticleAbstract extends Component {
 		       <h3 className="article-title">{article.content.title}</h3>
 		       <img className="article-image" src={article.content.image} alt="" />
 		       <div className="article-description">{Parser( htmlClean )}</div>
-		       <a href={readMore} className="article-link"> read more </a>
+		       <a href={readMore} className="article-link">Read More</a>
 		    </div>
 	    );
 	}

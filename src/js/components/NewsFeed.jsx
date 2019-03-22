@@ -14,7 +14,7 @@ let NewsFeed = ({ json, loading }) => {
     NewsFeed = <h3 className="loading-indicator">Loading ...</h3>
   }
   return (
-   <div className="news-feed-wrapper">
+   <div className="news-feed-wrapper right-50">
      {NewsFeed}
    </div>
   )

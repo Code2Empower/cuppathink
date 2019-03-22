@@ -29,16 +29,17 @@ class News extends Component{
 		const { app } = this.props;
 
 		return (
-			<div className="news-wrapper">
-				<h1>news</h1>
+			<div className="news-wrapper container full-width">
+				<h1>World News</h1>
 				<h3>{news.story}</h3>
 				<p>{app.AppTitle}</p>
-				<div className="news-sources-wrapper">
+				<div className="news-sources-wrapper left-50 shadow">
 					<NewsSources/>
+					<div className="news-fetch-wrapper">
+						<NewsFetchButton/>
+					</div>
 				</div>
-				<div className="news-fetch-wrapper">
-					<NewsFetchButton/>
-				</div>
+
 				<NewsFeed/>
 			</div>
 		)
