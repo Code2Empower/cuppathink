@@ -695,3 +695,124 @@ input[type='checkbox'].dmcheck {
   }
 }
 /*End News*/
+/*Begin Articles*/
+.articles-page-wrapper{
+  margin-bottom: 50px;
+  
+  h1{
+  }
+  .article-feed-wrapper{
+    margin-top: 20px;
+
+    .article-item{
+      text-align: left;
+      margin:0px 0px 15px 0px;
+      display: block;
+
+      .article-image{
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+      }
+      .article-title{
+        margin-bottom:6px;
+      }
+      .article-description{
+        margin: 0px 0px 0px 2px;
+      }
+      .article-link{
+        margin: 0px 0px 0px 2px;
+      }
+    }
+  }
+}
+/*End Articles*/
+/*Begin Article Detail*/
+.article-detail-wrapper{
+  margin-bottom: 50px;
+  
+  .article-item{
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .article-title{
+      font-size: 42px;
+    }
+    h1{
+      font-size: 30px;
+    }
+    h2{
+      font-size: 22px;
+    }
+    h3{
+      font-size: 18px;
+    }
+    em, em > strong{
+      font-style: italic;
+    }
+    strong, strong > em, em > strong {
+      font-weight: bold;
+    }
+    blockquote {
+      border-left: 10px solid $grey;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+    }
+    blockquote:before {
+      color: $grey;
+      content: open-quote;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+    }
+    blockquote p {
+      display: inline;
+      margin-left: 4px;
+    }
+    code{
+      background-color: rgba(27,31,35,.1);
+      border-radius: 3px;
+      font-size: 85%;
+      margin: 0;
+      padding: .2em .4em;
+    }
+    img{
+      max-width:500px;
+      margin: 0 auto;
+      display: inline-block;
+      clear:both;
+    }
+    img.article-image{
+      width:800px;
+      max-width: 800px;
+      height: auto;
+    }
+    ol{
+      list-style-type: upper-roman;
+      list-style-position: inside;
+    }
+    ul{
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+  }
+}
+body.dark{
+  .article-detail-wrapper{
+    .article-item{
+      blockquote {
+        border-left: 10px solid $white;
+      }
+      blockquote:before {
+        color: $white;
+      }
+      code{
+        background-color: rgba(31,40,51,.65);
+      }
+    }
+  }
+}
+/*End Article Detail*/
