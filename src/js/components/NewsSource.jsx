@@ -4,9 +4,7 @@ import { getSource } from '../actions/index';
 
 let NewsSource = ({ sourceName, sourceID, onClick, active }) => (
 <div onClick={onClick} className="news-item">
-	<div className="source-button button" meta-source-id={sourceID}
-		 style={{ backgroundColor: active === sourceID ? 'orange' :  'red'
-	}}>
+	<div className={ active === sourceID ? 'source-button button active' :  'source-button button'} meta-source-id={sourceID}>
 		<p>{sourceName}</p>
 	</div>
 </div>
