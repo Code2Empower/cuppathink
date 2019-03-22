@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import showdown from 'showdown';
-import DOMPurify from 'dompurify';
 import Parser from 'html-react-parser';
 import { render } from 'react-dom';
-import { articleDetailLinker } from '../helpers/helpers';
-
-const converter = new showdown.Converter();
+import { articleDetailLinker, purifyHTML} from '../helpers/helpers';
 
 class ArticleAbstract extends Component {
 	render() {
 		const article = this.props.article;
 		console.log(article)
-		const htmlDirty = converter.makeHtml(article.content.abstract);
-		const htmlClean = DOMPurify.sanitize(htmlDirty).toString();
+		const htmlClean = purifyHTML(article.content.abstract, true);
 		const readMore = articleDetailLinker(article.slug, 'internal');
 
 		return (

@@ -82,8 +82,13 @@ export function getSlugFromURL(url){
 }
 
 
-export function purifyHTML(str){
+export function purifyHTML(str, noFollow){
     const htmlDirty = converter.makeHtml(str);
     const htmlClean = DOMPurify.sanitize(htmlDirty).toString();
-    return htmlClean;
+    if(noFollow){
+      const htmlNoFollow = htmlClean.replace(/<a/g, "<a rel='nofollow noopener noreferrer'")
+      return htmlNoFollow;   
+    }else{
+      return htmlClean;
+    }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import staticData from '../constants/static-data';
-import {parseStoryblockData} from '../helpers/helpers';
+import {parseStoryblockPage} from '../helpers/helpers';
 import {ONLINERESEARCHHELP_LOADED} from '../constants/action-types';
 
 class OnlineResearchHelp extends Component{
@@ -15,7 +15,7 @@ class OnlineResearchHelp extends Component{
     .then(res => {
 		const APIdata = res.data;
 		console.log('Online Reasearch Help: Storyblok API Data:', APIdata);
-		const appData = parseStoryblockData(APIdata.stories);
+		const appData = parseStoryblockPage(APIdata.stories);
 		appData["isLoaded"] = true;
 		console.log('Online Reasearch Help: appData', appData)
 		onLoad(appData);
@@ -28,8 +28,7 @@ class OnlineResearchHelp extends Component{
 
 		return (
 			<div className="home-wrapper">
-				<h1>{onlineResearchHelp.Page}</h1>
-				<p>{app.AppTitle}</p>
+				<h1>{onlineResearchHelp.page_title}</h1>
 			</div>
 		)
 	}
