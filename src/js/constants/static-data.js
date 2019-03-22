@@ -6,12 +6,12 @@ const currentYear = new Date().getFullYear();
 const staticData ={
 	blognameName: "Blog Name",
 	currentYear: currentYear,
-	website: "https://www.cuppathink.com",
-	websiteClean: "www.cuppathink.com",
+	website: "https://www.cuppathink.blog",
+	websiteClean: "www.cuppathink.blog",
 	emailText: "Email:",
 	emailIcon: emailIcon,
 	headerLogo: headerLogo,
-	email: "info@cuppathink.com",
+	email: "info@cuppathink.blog",
 	footer:{
 		legalJargon1: "Copyright © 2018-",
 		legalJargon2: " CuppaThink",
