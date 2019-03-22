@@ -6,14 +6,23 @@ let darkMode = localStorage.getItem('darkMode') ==='dark' ? true : false;
 function checkTheme(){
   if (!darkMode){
     document.body.className = 'light';
+    document.querySelector('.sun i').className = 'fas fa-sun';
+    document.querySelector('.moon i').className = 'fas fa-cloud-moon';
   }
   document.querySelector('#dmcheck').checked = darkMode;
 }
 function setTheme(className){
   let isDark = className === 'dark' ? true : false;
-  document.body.className= className;
+  document.body.className = className;
   localStorage.setItem('darkMode', className);
   document.querySelector('#dmcheck').checked = isDark;
+  if(isDark){
+    document.querySelector('.sun i').className = 'fas fa-cloud-sun';
+    document.querySelector('.moon i').className = 'fas fa-moon';
+  }else{
+    document.querySelector('.sun i').className = 'fas fa-sun';
+    document.querySelector('.moon i').className = 'fas fa-cloud-moon';
+  }
 }
 function toggleTheme(elem){
   if(darkMode === true){
@@ -21,11 +30,15 @@ function toggleTheme(elem){
     localStorage.setItem('darkMode', 'light');
     darkMode = false;
     elem.checked = darkMode;
+    document.querySelector('.sun i').className = 'fas fa-sun';
+    document.querySelector('.moon i').className = 'fas fa-cloud-moon';
   }else{
     document.body.className = 'dark';
     localStorage.setItem('darkMode', 'dark');
     darkMode = true;
     elem.checked = darkMode;
+    document.querySelector('.sun i').className = 'fas fa-cloud-sun';
+    document.querySelector('.moon i').className = 'fas fa-moon';
   }
 }
 
@@ -38,7 +51,7 @@ class DarkModeToggle extends Component {
     return (
       <div className="dark-mode-toggle">
         <button className="sun" type="button" onClick={() => setTheme('light')}>
-          ☀&#xFE0E;
+          <i className="fas fa-cloud-sun"></i>
         </button>
         <span className="toggle-control">
           <input
@@ -51,7 +64,7 @@ class DarkModeToggle extends Component {
           <label htmlFor="dmcheck" />
         </span>
         <button type="button" className="moon" onClick={() => setTheme('dark')}>
-          ☾&#xFE0E;
+          <i className="fas fa-moon"></i>
         </button>
       </div>
     );
