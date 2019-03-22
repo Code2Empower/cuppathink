@@ -100,8 +100,9 @@ body.dark{
 .main{
   position: relative;
   width: 100%;
-  margin-top: 75px;
+  margin-top: 15px;
   padding-bottom:150px;
+  text-align: center;
 }
 @media all and (max-width: 579px){
   .main{
@@ -134,35 +135,60 @@ h2{
     font-size: 24px;
 }
 h3{
-    font-size: 18px;
+    font-size: 20px;
 }
 .hidden{display: none !important;}
-.button{
-  display: inline-block;
-  background-color: $teal;
-  margin-left: 15px;
-  padding: 5px 8px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: $white !important;
-  -moz-box-shadow: 0px 7px 15px rgba(0,0,0,0.3);
-  -webkit-box-shadow: 0px 7px 15px rgba(0,0,0,0.3);
-  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease 0s;
-  border-width: 0px;
-}
-.button:hover{
-  color: $white !important;
-  background-color: $aqua;
-  -webkit-transition: background-color 180ms linear;
-  -moz-transition: background-color 180ms linear;
-  -o-transition: background-color 180ms linear;
-  -ms-transition: background-color 180ms linear;
-  transition: background-color 180ms linear;
-  transform: translateY(-1px);
-  -moz-box-shadow: 0px 7px 15px rgba(102,252,241,0.4);
-  -webkit-box-shadow: 0px 7px 15px rgba(102,252,241,0.4);
-  box-shadow: 0px 7px 15px rgba(102,252,241,0.4);
+.dark .main, .light .main{
+  .button{
+    display: inline-block;
+    background-color: $darkTeal;
+    margin-left: 15px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: $grey;
+    font-weight: bold;
+    -moz-box-shadow: 0px 7px 15px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 7px 15px rgba(0,0,0,0.3);
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+    border-width: 0px;
+      p,div,span{
+        color: $grey;
+        font-weight: bold;
+      }
+  }
+  .button.active{
+    background-color: $midnight;
+    color: $darkTeal;
+    -moz-box-shadow: 0px 7px 15px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 7px 15px rgba(0,0,0,0.3);
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+    border: 1px solid $teal;
+      p,div,span{
+        color: $darkTeal;
+        font-weight: bold;
+      }
+  }
+  .button:hover{
+    color: $aqua;
+    background-color: $teal;
+    cursor: pointer;
+    -webkit-transition: background-color 180ms linear;
+    -moz-transition: background-color 180ms linear;
+    -o-transition: background-color 180ms linear;
+    -ms-transition: background-color 180ms linear;
+    transition: background-color 180ms linear;
+    transform: translateY(-1px);
+    -moz-box-shadow: 0px 7px 15px rgba(102,252,241,0.4);
+    -webkit-box-shadow: 0px 7px 15px rgba(102,252,241,0.4);
+    box-shadow: 0px 7px 15px rgba(102,252,241,0.4);
+    p,div,span{
+        color: $aqua;
+        font-weight: bold;
+      }
+  }
 }
 .container{
   width: calc(100% - 3px);
@@ -601,3 +627,69 @@ input[type='checkbox'].dmcheck {
   }
 }
 /*End About*/
+/*Begin News*/
+.news-wrapper{
+  margin-bottom:50px;
+  text-align:center;
+  h1{
+  }
+  .news-sources-wrapper{
+    margin:15px 15px 0px 0px;
+    width:100%;
+    max-width: 500px;
+    text-align: left;
+    background:$grey;
+    padding:15px 0px 15px 10px;
+    border-radius: 10px;
+    .news-item{
+      display: inline-block;
+      width:auto;
+      clear:none;
+      .source-button{
+        display: inline-block;
+        width:auto;
+        clear:none;
+        margin: 0px 10px 15px 10px;
+      }
+    }
+    .news-fetch-wrapper{
+      .button{
+        margin:0px 10px;
+        background:$midnight;
+        color:$white;
+        text-shadow: none;
+        font-weight: normal;
+      }
+      .button:hover{
+        background:$teal;
+        color:$aqua;
+        font-weight: bold;
+        text-shadow: none;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .news-feed-wrapper{
+    text-align: left;
+    margin:5px 0px 0px 5px;
+    .news-item{
+      width:100%;
+      max-width: 500px;
+      margin-bottom:25px;
+      .news-title{
+        margin-bottom: 10px;
+      }
+      .news-image{
+
+      }
+      .news-description{
+        margin: 0px 6px 2px 6px;
+      }
+      .news-link{
+        margin: 0px 0px 0px 6px;
+      }
+    }
+  }
+}
+/*End News*/
