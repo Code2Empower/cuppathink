@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import { Helmet } from "react-helmet";
 import staticData from '../constants/static-data';
 import {parseStoryblockData, parseStoryblockPage} from '../helpers/helpers';
 import {ARTICLES_LOADED} from '../constants/action-types';
@@ -38,6 +39,10 @@ class Articles extends Component{
 		
 		return (
 			<div className="articles-page-wrapper">
+				<Helmet>
+					<title>Articles | CuppaThink</title>
+				    <meta name="description" content="The latest news articles and updates from CuppaThink."/>
+				</Helmet>
 				<h1>{articlesPage.title}</h1>
 				<ArticleFeed/>
 			</div>
