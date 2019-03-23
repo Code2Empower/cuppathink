@@ -63,6 +63,6 @@ Redux is used to manage state.  History is created in `store/index.js`.  Routes 
 I added redux-thunk to `store/index.js` when I was determining the best way to handle state management.  It lives there, and only there, and if I remove it, the application breaks.  I have no clue how it works; it's basically magic. So, it will probably stay forever now.
 
 ## **Branching & Deployment Via Netlify**
-All major updates should be branched from `dev`, once ready they can ber merged back to `dev`.  Finally, to deploy live, dev latest should be merged with `master`.  As soon as `master` is updated, a live deploy will be initiated.
+All major updates should be branched from `dev`, once ready they can be merged back to `dev`.  Finally, to deploy live, dev latest should be merged with `master`.  As soon as `master` is updated, a live deploy will be initiated.
 
-Branches can be viewed in a preview envirnment via the netlify site.
+Branches can be viewed in a preview environment via the netlify site.
