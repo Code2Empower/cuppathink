@@ -847,3 +847,32 @@ body.dark{
   }
 }
 /*End Article Detail*/
+/*Begin Research*/
+.research-wrapper{
+  margin: 15px auto 50px auto;
+
+  h1{
+    text-align: left;
+    margin-bottom: 6px;
+    display: inline-block;
+    float:left;
+    clear: both;
+    &.research-intro-header{
+      border-bottom: 2px solid currentColor;
+    }
+  }
+
+  .research-section{
+    text-align: left;
+    display: inline-block;
+    float:left;
+    clear: both;
+    &.research-intro{
+
+    }
+    p{
+      margin-bottom:12px;
+    }
+  }
+}
+/*End Research*/
