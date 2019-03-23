@@ -647,11 +647,15 @@ input[type='checkbox'].dmcheck {
 /*End Home*/
 /*Begin About*/
 .about-wrapper{
+  margin-bottom: 50px;
+  max-width: 800px;
   .about-title{
     margin:0px 0px 10px 0px;
+    text-align: left;
   }
   .about-intro{
     margin:0px 0px 25px 0px;
+    text-align: left;
     img{
       width:100%;
       max-width: 600px;
