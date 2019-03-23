@@ -819,6 +819,7 @@ input[type='checkbox'].dmcheck {
       margin: 0 auto;
       display: inline-block;
       clear:both;
+      width:100%;
     }
     img.article-image{
       width:100%;
@@ -847,6 +848,13 @@ body.dark{
       code{
         background-color: rgba(31,40,51,.65);
       }
+    }
+  }
+}
+@media all and (max-width: 800px){
+  .article-detail-wrapper{
+    .article-item{
+      padding:0px 8px 0px 8px;
     }
   }
 }
