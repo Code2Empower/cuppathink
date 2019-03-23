@@ -761,6 +761,18 @@ input[type='checkbox'].dmcheck {
     }
   }
 }
+@media all and (max-width: 800px){
+  .articles-page-wrapper{
+    .article-feed-wrapper{
+      .article-item{
+        margin-bottom:45px;
+        .right-65{
+          margin-top:4px;
+        }
+      }
+    }
+  }
+}
 /*End Articles*/
 /*Begin Article Detail*/
 .article-detail-wrapper{

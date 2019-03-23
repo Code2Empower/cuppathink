@@ -69,7 +69,7 @@ export function articleDetailLinker(slug, ref, params){
   }else{
     ref = '?ref=internal'
   }
-  const base = 'https://www.cuppathink.blog/articledetail/';
+  const base = '/articledetail/';
   const fullURL = base+slug+ref+params;
 
   return fullURL;
