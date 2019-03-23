@@ -28,6 +28,8 @@ class Header extends Component {
 		          			<a className="nav-home" href="../online-research-help">Online Research Help</a>
 		          			<a className="nav-home" href="../articles">Articles</a>
 		          			<a className="nav-home" href="../news">World News</a>
+
+		          			<a className="secondary-nav-close" onClick={() =>{burgerToggle(document.querySelector('.hamburger'))}}><span>X</span>&nbsp; Close Nav</a>
 		          		</div>
 	          		</div>
 	          		<a href="./">
