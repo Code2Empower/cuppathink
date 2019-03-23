@@ -32,7 +32,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## **Content & CMS**
 StoryBlok is the current CMS. There is a posts section, which has a schema defined for all articles.  All other content is stored via page name, or global `app` data. There is also a `static-data.js` file in the `src/js/constants` folder, which contains data that should not need frequent updates.  There are several functions for parsing StoryBlok data, and making it easier to reference in the app.  These functions live in `src/js/helpers/helpers.js`.
 
-Anchor tag parameters like `target` and `rel` are handled via app logic.  Whenever a string is passed to `purifyHTML`, which lives in `./js/helpers/helpers.js`, an optional second param can be passed. It can be `'both'` to add `rel='nofollow noreferrer` and target='_blank' or `'target'`, which only adds the target param.  All cases, even without this param, will recieve `rel=noopener` on any exteral links, as a security step.
+Anchor tag parameters like `target` and `rel` are handled via app logic.  Whenever a string is passed to `purifyHTML`, which lives in `./js/helpers/helpers.js`, an optional second param can be passed. It can be `'both'` to add `rel='nofollow noreferrer` and `target='_blank'` or `'target'`, which only adds the target param.  All cases, even without this param, will recieve `rel='noopener'` on any exteral links, as a security step.
 
 ## **Architecture**
 ### index.html
