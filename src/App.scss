@@ -851,6 +851,13 @@ body.dark{
     }
   }
 }
+@media all and (max-width: 800px){
+  .article-detail-wrapper{
+    .article-item{
+      padding:0px 8px 0px 8px;
+    }
+  }
+}
 /*End Article Detail*/
 /*Begin Research*/
 .research-wrapper{
