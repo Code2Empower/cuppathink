@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import { Helmet } from "react-helmet";
 import staticData from '../constants/static-data';
 import {parseStoryblockPage} from '../helpers/helpers';
 import {NEWS_LOADED} from '../constants/action-types';
@@ -31,6 +32,11 @@ class News extends Component{
 
 		return (
 			<div className="news-wrapper container full-width">
+
+				<Helmet>
+					<title>World News | CuppaThink</title>
+				    <meta name="description" content="Get the latest news from around the world | CuppaThink."/>
+				</Helmet>
 				<h1>{newsPage.page_title}</h1>
 				<p>{newsPage.news_details}</p>
 				<div className="news-sources-wrapper left-50 shadow">

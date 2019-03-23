@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import { Helmet } from "react-helmet";
 import Parser from 'html-react-parser';
 import staticData from '../constants/static-data';
 import {parseStoryblockPage, purifyHTML} from '../helpers/helpers';
@@ -29,6 +30,10 @@ class About extends Component{
 
 		return (
 			<div className="about-wrapper container full-width">
+					<Helmet>
+			            <title>About CuppaThink</title>
+			            <meta name="description" content="Find out what CuppaThink is all about."/>
+			         </Helmet>
 				<h1 className="about-title">{about.page_title}</h1>
 				<div className="about-intro">
 					{Parser( purifyHTML(about.about_details, 'no') )}
