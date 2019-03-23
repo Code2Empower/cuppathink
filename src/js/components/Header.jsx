@@ -23,26 +23,26 @@ class Header extends Component {
 	          		<div className="header-nav-mobile">
 	          			<div className="hamburger" onClick={(e) =>{burgerToggle(e.target)}}><span></span></div>
 	          			<div className="mobile-links">
-		          			<a className="nav-home" href="https://www.cuppathink.blog/">Home</a>
-		          			<a className="nav-home" href="https://www.cuppathink.blog/about">About</a>
-		          			<a className="nav-home" href="https://www.cuppathink.blog/online-research-help">Online Research Help</a>
-		          			<a className="nav-home" href="https://www.cuppathink.blog/articles">Articles</a>
-		          			<a className="nav-home" href="https://www.cuppathink.blog/news">World News</a>
+		          			<a className="nav-home" href="/">Home</a>
+		          			<a className="nav-home" href="/about">About</a>
+		          			<a className="nav-home" href="/online-research-help">Online Research Help</a>
+		          			<a className="nav-home" href="/articles">Articles</a>
+		          			<a className="nav-home" href="/news">World News</a>
 
 		          			<a className="secondary-nav-close" onClick={() =>{burgerToggle(document.querySelector('.hamburger'))}}><span>X</span>&nbsp; Close Nav</a>
 		          		</div>
 	          		</div>
-	          		<a href="https://www.cuppathink.blog/">
+	          		<a href="/">
 	          			<div className="header-logo">
 	          				<img src={staticData.headerLogo} alt="site logo"/>
 	          			</div>
 	          		</a>
 	          		<div className="header-nav">
-	          			<a className="nav-home" href="https://www.cuppathink.blog/">Home</a>
-	          			<a className="nav-home" href="https://www.cuppathink.blog/about">About</a>
-	          			<a className="nav-home" href="https://www.cuppathink.blog/online-research-help">Online Research Help</a>
-	          			<a className="nav-home" href="https://www.cuppathink.blog/articles">Articles</a>
-	          			<a className="nav-home" href="https://www.cuppathink.blog/news">World News</a>
+	          			<a className="nav-home" href="/">Home</a>
+	          			<a className="nav-home" href="/about">About</a>
+	          			<a className="nav-home" href="/online-research-help">Online Research Help</a>
+	          			<a className="nav-home" href="/articles">Articles</a>
+	          			<a className="nav-home" href="/news">World News</a>
 	          		</div>
 	          	</div>
 	          </div>
