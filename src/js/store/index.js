@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 import {reducers} from '../reducers/index';
 
-export const history = createHistory()
+export const history = createHistory();
 
 const store = createStore(
  	reducers,
