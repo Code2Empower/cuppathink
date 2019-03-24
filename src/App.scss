@@ -778,6 +778,13 @@ input[type='checkbox'].dmcheck {
 .article-detail-wrapper{
   margin-bottom: 50px;
   
+  .article-detail-back{
+    font-size: 30px;
+    display: inline-block;
+    float: left;
+    margin:20px 10px 20px 20px;
+  }
+
   .article-item{
     text-align: left;
     max-width: 800px;
