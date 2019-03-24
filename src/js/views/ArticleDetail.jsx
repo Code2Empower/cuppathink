@@ -6,6 +6,7 @@ import staticData from '../constants/static-data';
 import {parseStoryblockArticle, getSlugFromURL} from '../helpers/helpers';
 import { articleDetailLinker } from '../helpers/helpers';
 import ArticleFull from '../components/ArticleFull';
+import BackArrow from '../components/BackArrow';
 import {ARTICLEDETAIL_LOADED} from '../constants/action-types';
 
 class ArticleDetail extends Component{
@@ -47,7 +48,11 @@ class ArticleDetail extends Component{
 			            <meta name="description" content={this.state.articleDetail.content.title} />
 			            <meta name="og:image" content={this.state.articleDetail.content.image} />
 			         </Helmet>
-					
+					<BackArrow
+						to={'/articles'}
+						text={' Articles'}
+						className={'article-detail-back'}
+					/>
 					<ArticleFull key={this.state.slug} article={this.state.articleDetail} />
 				</div>
 			)
