@@ -33,9 +33,7 @@ class Articles extends Component{
 
 	}
 	render() {
-		const { articles } = this.props;
 		const { articlesPage } = this.props;
-		const { app } = this.props;
 		
 		return (
 			<div className="articles-page-wrapper">

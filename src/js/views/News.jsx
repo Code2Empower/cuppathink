@@ -26,9 +26,7 @@ class News extends Component{
   }
 
 	render() {
-		const { news } = this.props;
 		const { newsPage } = this.props;
-		const { app } = this.props;
 
 		return (
 			<div className="news-wrapper container full-width">
