@@ -126,6 +126,10 @@ h1,h2,h3,h4,h5,h6{
   h1,h2,h3,h4,h5,h6,p{
     color:$white;
     transition: all 0.3s ease;
+    text-shadow: none;
+  }
+  strong{
+    text-shadow: none;
   }
 }
 h1{
@@ -794,6 +798,7 @@ input[type='checkbox'].dmcheck {
 
     .article-title{
       font-size: 42px;
+      margin-bottom: 25px;
     }
     h1{
       font-size: 30px;
@@ -809,6 +814,11 @@ input[type='checkbox'].dmcheck {
     }
     strong, strong > em, em > strong {
       font-weight: bold;
+    }
+    cite{
+      margin-bottom:18px;
+      display: block;
+      color:$grey;
     }
     blockquote {
       border-left: 10px solid $grey;
@@ -869,6 +879,9 @@ body.dark{
       }
       code{
         background-color: rgba(31,40,51,.65);
+      }
+      cite{
+        color:$moon;
       }
     }
   }
