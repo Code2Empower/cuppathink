@@ -5,11 +5,8 @@ const converter = new showdown.Converter();
 export function parseStoryblockData(arr){
   let appData ={}
   for(let i=0;i<arr.length;i++){
-    //adds posts to array
-    if(arr[i].name.includes('Post')){
       appData.posts = appData.posts || [];
       appData.posts.push(arr[i]);
-    } 
   }
   return appData;
 };
