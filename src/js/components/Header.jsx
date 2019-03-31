@@ -24,11 +24,11 @@ class Header extends Component {
 	          		<div className="header-nav-mobile">
 	          			<div className="hamburger" onClick={(e) =>{burgerToggle(e.target)}}><span></span></div>
 	          			<div className="mobile-links">
-		          			<Link className="nav-home" activeClassName="active" to="/">Home</Link>
-		          			<Link className="nav-home" activeClassName="active" to="/about">About</Link>
-		          			<Link className="nav-home" activeClassName="active" to="/online-research-help">Online Research Help</Link>
-		          			<Link className="nav-home" activeClassName="active" to="/articles">Articles</Link>
-		          			<Link className="nav-home" activeClassName="active" to="/news">World News</Link>
+		          			<Link className="nav-home" activeclassname="active" to="/">Home</Link>
+		          			<Link className="nav-home" activeclassname="active" to="/about">About</Link>
+		          			<Link className="nav-home" activeclassname="active" to="/online-research-help">Online Research Help</Link>
+		          			<Link className="nav-home" activeclassname="active" to="/articles">Articles</Link>
+		          			<Link className="nav-home" activeclassname="active" to="/news">World News</Link>
 
 		          			<a className="secondary-nav-close" onClick={() =>{burgerToggle(document.querySelector('.hamburger'))}}><span>X</span>&nbsp; Close Nav</a>
 		          		</div>
@@ -39,11 +39,11 @@ class Header extends Component {
 	          			</div>
 	          		</Link>
 	          		<div className="header-nav">
-	          			<Link className="nav-home" activeClassName="active" to="/">Home</Link>
-	          			<Link className="nav-home" activeClassName="active" to="/about">About</Link>
-	          			<Link className="nav-home" activeClassName="active" to="/online-research-help">Online Research Help</Link>
-	          			<Link className="nav-home" activeClassName="active" to="/articles">Articles</Link>
-	          			<Link className="nav-home" activeClassName="active" to="/news">World News</Link>
+	          			<Link className="nav-home" activeclassname="active" to="/">Home</Link>
+	          			<Link className="nav-home" activeclassname="active" to="/about">About</Link>
+	          			<Link className="nav-home" activeclassname="active" to="/online-research-help">Online Research Help</Link>
+	          			<Link className="nav-home" activeclassname="active" to="/articles">Articles</Link>
+	          			<Link className="nav-home" activeclassname="active" to="/news">World News</Link>
 	          		</div>
 	          	</div>
 	          </div>
