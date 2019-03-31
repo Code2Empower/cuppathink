@@ -30,7 +30,7 @@ class Header extends Component {
 		          			<Link className="nav-home" activeclassname="active" to="/articles">Articles</Link>
 		          			<Link className="nav-home" activeclassname="active" to="/news">World News</Link>
 
-		          			<a className="secondary-nav-close" onClick={() =>{burgerToggle(document.querySelector('.hamburger'))}}><span>X</span>&nbsp; Close Nav</a>
+		          			<button className="secondary-nav-close" onClick={() =>{burgerToggle(document.querySelector('.hamburger'))}}><span>X</span>&nbsp; Close Nav</button>
 		          		</div>
 	          		</div>
 	          		<Link to="/">

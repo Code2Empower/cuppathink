@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import staticData from '../constants/static-data';
 import {parseStoryblockArticle, getSlugFromURL} from '../helpers/helpers';
-import { articleDetailLinker } from '../helpers/helpers';
 import ArticleFull from '../components/ArticleFull';
 import BackArrow from '../components/BackArrow';
 import {ARTICLEDETAIL_LOADED} from '../constants/action-types';
@@ -22,7 +21,9 @@ class ArticleDetail extends Component{
 	componentDidMount() {
 		const { onLoad } = this.props;
 		const slug = getSlugFromURL(window.location.href);
-		this.state.slug = slug;
+		this.setState({
+			slug: slug
+		});
 
 		const cv = '&cv='+ Math.floor(Date.now()/1000);
 		axios.get(staticData.api.storyblockBase+'stories/posts/'+slug+'?version=published&'+staticData.api.storyblockToken+cv)
@@ -31,8 +32,12 @@ class ArticleDetail extends Component{
 			console.log('ArticleDetail: Storyblok API Data:', APIdata);
 			const articleData = parseStoryblockArticle(APIdata.story);
 			console.log('ArticleDetail:', articleData)
-			this.state.articleDetail = articleData;
-			this.state.loaded = true;
+			this.setState({
+				articleDetail: articleData
+			});
+			this.setState({
+				loaded: true
+			});
 			onLoad(articleData);
 		});
 	}

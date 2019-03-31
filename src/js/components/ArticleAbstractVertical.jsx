@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Parser from 'html-react-parser';
-import { render } from 'react-dom';
 import { articleDetailLinker, purifyHTML } from '../helpers/helpers';
 
 class ArticleAbstractVertical extends Component {

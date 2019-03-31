@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Parser from 'html-react-parser';
 import axios from 'axios';
-import { Helmet } from "react-helmet";
 import staticData from '../constants/static-data';
 import {parseStoryblockPage, parseStoryblockData, purifyHTML} from '../helpers/helpers';
 import {HOME_LOADED} from '../constants/action-types';
@@ -36,8 +35,6 @@ class Home extends Component{
 
 	render() {
 		const { home } = this.props;
-		const { articles } = this.props;
-		const { app } = this.props;
 
 		return (
 			<div className="home-wrapper container full-width">

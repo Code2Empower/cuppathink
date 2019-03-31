@@ -26,7 +26,6 @@ class OnlineResearchHelp extends Component{
 
 	render() {
 		const { onlineResearchHelp } = this.props;
-		const { app } = this.props;
 
 		return (
 			<div className="research-wrapper container full-width">

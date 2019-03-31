@@ -26,7 +26,6 @@ class About extends Component{
 
 	render() {
 		const { about } = this.props;
-		const { app } = this.props;
 
 		return (
 			<div className="about-wrapper container full-width">

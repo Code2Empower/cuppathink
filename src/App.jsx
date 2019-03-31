@@ -19,8 +19,7 @@ import {parseStoryblockData} from './js/helpers/helpers';
 import {APP_LOADED} from './js/constants/action-types';
 import { 
   Router, 
-  Route, 
-  Link, 
+  Route,
   Switch
 } from 'react-router-dom';
 
