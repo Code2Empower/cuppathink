@@ -18,7 +18,7 @@ import staticData from './js/constants/static-data';
 import {parseStoryblockData} from './js/helpers/helpers';
 import {APP_LOADED} from './js/constants/action-types';
 import { 
-  BrowserRouter as Router, 
+  Router, 
   Route, 
   Link, 
   Switch
