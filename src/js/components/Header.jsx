@@ -24,11 +24,11 @@ class Header extends Component {
 	          		<div className="header-nav-mobile">
 	          			<div className="hamburger" onClick={(e) =>{burgerToggle(e.target)}}><span></span></div>
 	          			<div className="mobile-links">
-		          			<Link className="nav-home" activeclassname="active" to="/">Home</Link>
-		          			<Link className="nav-home" activeclassname="active" to="/about">About</Link>
-		          			<Link className="nav-home" activeclassname="active" to="/online-research-help">Online Research Help</Link>
-		          			<Link className="nav-home" activeclassname="active" to="/articles">Articles</Link>
-		          			<Link className="nav-home" activeclassname="active" to="/news">World News</Link>
+		          			<Link className="nav-home" activeclassname="active" to="/" onClick={() =>{burgerToggle(document.querySelector('.hamburger'))}}>Home</Link>
+		          			<Link className="nav-home" activeclassname="active" to="/about" onClick={() =>{burgerToggle(document.querySelector('.hamburger'))}}>About</Link>
+		          			<Link className="nav-home" activeclassname="active" to="/online-research-help" onClick={() =>{burgerToggle(document.querySelector('.hamburger'))}}>Online Research Help</Link>
+		          			<Link className="nav-home" activeclassname="active" to="/articles" onClick={() =>{burgerToggle(document.querySelector('.hamburger'))}}>Articles</Link>
+		          			<Link className="nav-home" activeclassname="active" to="/news" onClick={() =>{burgerToggle(document.querySelector('.hamburger'))}}>World News</Link>
 
 		          			<button className="secondary-nav-close" onClick={() =>{burgerToggle(document.querySelector('.hamburger'))}}><span>X</span>&nbsp; Close Nav</button>
 		          		</div>
