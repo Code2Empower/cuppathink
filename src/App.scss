@@ -376,6 +376,9 @@ p, ol li{
               color: $white;
             }
           }
+          .secondary-nav-close{
+            color: $aqua !important;
+          }
         }
       }
     }
@@ -438,6 +441,8 @@ p, ol li{
           padding: 6px;
           border-radius:3px;
           font-weight: bold;
+          background: none;
+          border: 1px solid $aqua;
 
           &:hover{
             cursor: pointer;
